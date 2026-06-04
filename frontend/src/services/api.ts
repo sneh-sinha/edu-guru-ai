@@ -1,6 +1,6 @@
 // Frontend API Service with automatic offline/mock fallbacks
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://edu-guru-ai.onrender.com/api';
 
 // Check if backend is reachable, if not, use mock
 let serverReachable = true;
