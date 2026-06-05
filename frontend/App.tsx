@@ -121,9 +121,15 @@ export default function App() {
         return (
           <AuthView
             onLoginSuccess={async (userData) => {
+              const hasClass = userData.classLevel || (userData.class_level && userData.class_level !== 'Not Set');
+              if (hasClass) {
+                // Ensure classLevel is set for the frontend consistency
+                userData.classLevel = userData.classLevel || userData.class_level;
+              }
               setUser(userData);
               await AsyncStorage.setItem('@eduguru_user', JSON.stringify(userData));
-              if (userData.classLevel) {
+              
+              if (hasClass) {
                 setScreen('dashboard');
               } else {
                 setScreen('onboarding');

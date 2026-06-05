@@ -60,7 +60,7 @@ export const apiService = {
         body: JSON.stringify(data)
       });
     } catch (e) {
-      return { success: true, user: { id: 'client-mock-uid-123', ...data, coins: 50, streak_days: 1 } };
+      return { success: true, user: { id: 'client-mock-uid-123', ...data, coins: 50, streak_days: 1 }, token: 'mock-token' };
     }
   },
 
@@ -72,7 +72,7 @@ export const apiService = {
         body: JSON.stringify(data)
       });
     } catch (e) {
-      return { success: true, user: { id: 'client-mock-uid-123', email: data.email, class_level: 'Class 6-8', coins: 150, streak_days: 3 } };
+      return { success: true, user: { id: 'client-mock-uid-123', email: data.email, classLevel: 'Class 6-8', class_level: 'Class 6-8', coins: 150, streak_days: 3 }, token: 'mock-token' };
     }
   },
 

@@ -135,7 +135,7 @@ export default function ChatView({
               <hr/>
               ${chatHtml}
               <script>
-                window.onload = () => { window.print(); window.close(); };
+                setTimeout(() => { window.print(); window.close(); }, 250);
               </script>
             </body>
           </html>
